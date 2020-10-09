@@ -1,0 +1,695 @@
+/*=================================================================================*/
+/*=================================================================================*/
+/*=================================================================================*/
+/*==========================||---------------------------||========================*/
+/*==========================|| Developed By Hossam Hilal ||========================*/
+/*==========================||---------------------------||========================*/
+/*====================================||------||===================================*/
+/*====================================|| 2020 ||===================================*/
+/*====================================||------||===================================*/
+/*=================================================================================*/
+/*=================================================================================*/
+
+@font-face {
+    font-family: 'cocon-Light';
+    src: url('../fonts/coconnextarabic-light.eot');
+    src: url('../fonts/CoconNextArabic-Light.svg#CoconNextArabic-Light') format('svg'),
+        url('../fonts/CoconNextArabic-Light.ttf') format('truetype'),
+        url('../fonts/CoconNextArabic-Light.woff') format('woff'),
+        url('../fonts/coconnextarabic-light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/coconnextarabic-light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'cocon-regular';
+    src: url('../fonts/CoconNextArabic-Regular.eot');
+    src: url('../fonts/CoconNextArabic-Regular.svg#CoconNextArabic-Light') format('svg'),
+        url('../fonts/CoconNextArabic-Regular.ttf') format('truetype'),
+        url('../fonts/CoconNextArabic-Regular.woff') format('woff'),
+        url('../fonts/CoconNextArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CoconNextArabic-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||             Basic         ||========================*/
+/*==========================||---------------------------||========================*/
+
+body {
+    font-family: 'cocon-regular', sans-serif;
+    overflow-x: hidden;
+    direction: rtl;
+    text-align: right;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p {
+    color: var(--text);
+}
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: var(#968AB2);
+    z-index: -1;
+    position: relative;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(#968AB2);
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: var(--darkBlue);
+    max-height: 50px;
+}
+
+button {
+    border: 0;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Header          ||========================*/
+/*==========================||---------------------------||========================*/
+
+header {
+    background: url('../images/header-bg.png') no-repeat;
+    background-size: cover;
+    padding: 40px 0 0 0;
+}
+
+.nav {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.headerInfo {
+    color: #fff;
+    background: #999795 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.headerInfo h3 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.headerForm {
+    background: #F7F7F7;
+    box-shadow: 0px 3px 23px #A1A1A129;
+    border-radius: 21px;
+    margin-bottom: 30px;
+}
+
+.formHead {
+    background: transparent linear-gradient(180deg, #6DBF1F 0%, #3C9309 100%) 0% 0% no-repeat padding-box;
+    border-radius: 21px 21px 0px 0px;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.formBody {
+    padding: 10px 20px;
+}
+
+.field {
+    margin-bottom: 5px;
+}
+
+.field label {
+    color: #333333;
+}
+
+.field .form-control {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.reqired label::after {
+    content: '*';
+}
+
+.formBody button {
+    background: #2C5C98 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    color: #fff;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0 10px;
+    cursor: pointer;
+}
+
+.formBody button:hover,
+.formBody button:focus {
+    background: #12bf39;
+    color: #fff;
+    box-shadow: none;
+    outline: 0;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: 45px;
+}
+
+.headerList {
+    display: flex;
+}
+
+.headerList ul {
+    padding: 0;
+    display: block;
+    width: 65%;
+    margin: 30px 0 0 0;
+}
+
+.headerList li {
+    display: block;
+    background: #96966E 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    padding: 7px 15px 7px 40px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.headerList img {
+    width: 50%;
+    margin-right: -10%;
+}
+
+@media screen and (max-width:575px) { 
+    .headerData .row {
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        margin: 0 0 20px 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    .nav {
+        margin-bottom: 20px;
+    }
+    
+    .headerInfo {
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
+    .headerInfo h3 {
+        font-size: 16px;
+    }
+    
+    .headerList {
+        margin-bottom: 15px;
+    }
+    
+    .headerList ul {
+        margin: 10px 0 0 0;
+        width: 70%;
+    }
+    
+    .headerList li {
+        font-size: 13px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .headerList img {
+        width: 40%;
+    }
+    
+    .headerForm {
+        margin-bottom: 10px;
+    }
+    
+    .formHead {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .formBody {
+        padding: 10px 15px;
+    }
+    
+    .field label {
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    .field .form-control {
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    select.form-control:not([size]):not([multiple]) {
+        height: 40px;
+    } 
+    
+    .formBody button {
+        height: 40px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .logo {
+        margin: 0 0 0 40px;
+        max-width: 100px;
+    }
+
+    .headerInfo {
+        padding: 20px;
+    }
+
+    .headerList {
+        margin: 0;
+        flex-direction: column;
+    }
+    
+    .headerList ul {
+        width: 100%;
+    }
+    
+    .headerList img {
+        width: auto;
+        max-width: 200px;
+        margin: auto;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Stages          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.stage {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.stage h2 {
+    color: #F36923;
+    font-size: 50px;
+}
+
+.stage p {
+    color: #6A6A6A;
+    font-size: 21px;
+    margin: 0;
+}
+
+.stage .row {
+    align-items: center;
+}
+
+.stage:nth-child(even) {
+    background: #FBF9F9;
+}
+
+.stage:nth-child(even) .row {
+    flex-direction: row-reverse;
+}
+
+.stageData {
+    padding: 0 40px;
+}
+
+@media screen and (max-width:768px) {
+    .stage {
+        padding: 20px 0;
+    }
+    
+    .stageData {
+        padding: 0;
+    }
+    
+    .stage h2 {
+        font-size: 26px;
+    }
+    
+    .stage p {
+        font-size: 15px;
+    }
+}
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Video          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.video {
+    width: 100%;
+    height: 460px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+@media screen and (max-width:768px) {
+    .video {
+        height: 300px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .video {
+        height: 450px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||         Advantages        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.advantage {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.advantage img {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.advantage h3 {
+    color: #414141;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.advantage p {
+    color: #A1A1A1;
+    font-size: 17px;
+}
+
+@media screen and (max-width:768px) {
+    .advantage img {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 8px;
+    }
+    
+    .advantage h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||            Steps          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.steps {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step {
+    width: 130px;
+    height: 130px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 8px solid #DDDDDD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8A8A8A;
+    font-size: 30px;
+}
+
+.steps .seprator {
+    padding: 0 30px;
+    font-size: 25px;
+    color: #8A8A8A;
+}
+
+@media screen and (max-width:768px) {
+    .steps {
+        padding: 30px 0;
+    }
+    
+    .step {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+        font-size: 14px;
+    }
+    
+    .steps .seprator {
+        font-size: 10px;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .step {
+        width: 90px;
+        height: 90px;
+        border-width: 5px;
+    }
+    
+    .steps .seprator {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Options         ||========================*/
+/*==========================||---------------------------||========================*/
+
+.options {
+    background: #FBF9F9;
+    padding: 50px 0;
+}
+
+.options h1 {
+    text-align: center;
+    color: #414141;
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+
+.option {
+    background: #FBF9F9 0% 0% no-repeat padding-box;
+    border: 3px solid #C29750;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: center;
+    padding: 25px;
+}
+
+.option span {
+    width: 50px;
+    height: 50px;
+    background: #C29750;
+    border: 3px solid #C29750;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: -20px -3px 0  0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.option h2 {
+    color: #8A8A8A;
+    font-size: 21px;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+}
+
+@media screen and (max-width:768px) {
+    .options {
+        padding: 30px 0;
+    }
+    
+    .options h1 {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .option {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .option span {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 7px;
+    }
+    
+    .option h2 {
+        font-size: 15px;
+    }
+
+    .col-12:last-of-type .option {
+        margin: 0;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Footer          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.footer {
+    background: url('../images/footerBanner.png') no-repeat;
+    background-size: cover;
+}
+
+.footerData {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footerData h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.footerData h3 {
+    color: #FFFFFF;
+    font-size: 27px;
+    line-height: 40px;
+}
+
+.orangeLink {
+    background: transparent linear-gradient(180deg, #F79C32 0%, #E16C14 100%) 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    margin: 30px auto 0;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.orangeLink:hover {
+    background: #2C5C98;
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .footerData {
+        padding: 20px 0;
+    }
+    
+    .footerData h2 {
+        font-size: 20px;
+    }
+    
+    .footerData h3 {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    .orangeLink {
+        font-size: 20px;
+        height: 40px;
+        font-size: 16px;
+        max-width: 220px;
+    }
+
+    .privacyBox {
+        flex-wrap: wrap;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Privacy         ||========================*/
+/*==========================||---------------------------||========================*/
+
+.privacy {
+    background: #343434;
+    box-shadow: 0px 2px 6px #00000029;
+}
+
+.privacyBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.privacyBox p {
+    margin: 0;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.privacyBox p a {
+    color: inherit;
+}
+
+.social {
+    display: flex;
+    padding: 10px 0;
+    color: #2C5C98;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.social a:hover {
+    background: #2C5C98;
+    color: #FFF;
+}
+
+@media screen and (max-width:768px) {
+
+}
